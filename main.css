@@ -1,0 +1,98 @@
+
+.nav-bar {
+    background-color: rgba(76, 128, 230, .4);
+    text-align: right;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+}
+
+.nav-bar button {
+    background-color: rgb(71, 92, 133);
+    color: white;
+    height: 100%;
+}
+
+.nav-bar button:hover {
+    background-color: rgba(223, 223, 32, .5);
+}
+.margin-top {
+    margin-top: 150px;
+}
+
+.logo {
+    height: 50px;
+    width: 80px;
+}
+.parallax1 {
+    background-image: url("https://goo.gl/brGgI6");
+    min-height:1000px;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-block {
+    background-color: rgba(133, 156, 224, .5);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    background-image: url("https://goo.gl/uYw3rM");
+    min-height:1000px;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("https://goo.gl/FsfUQX");
+    min-height:1000px;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title-box {
+    background-color: rgba(153, 153, 153, .7);
+    min-height: 500px;
+    max-height: 500px;
+    width: 60%;
+    text-align: center;
+    margin: auto;
+    line-height: 500px;
+    box-shadow: 10px 10px 5px rgba(51, 51, 51, .8);
+    font-family: 'Ruslan Display', cursive;
+    font-size: 40px;
+}
+
+.col-lg-6 {
+    position: static;
+}
+
+.para-text {
+    color: rgba(89, 89, 89, .8);
+    font-family: 'Ruslan Display', cursive;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: static;
+}
+
+.para-text p {
+    font-size: 20px;
+    position: static;
+}
+
+.para-text img {
+    max-width: 100%;
+    position: static;
+}
