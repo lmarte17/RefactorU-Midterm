@@ -1,21 +1,8 @@
-
-.nav-bar {
-    background-color: rgba(76, 128, 230, .4);
-    text-align: right;
-    height: 50px;
-    position: fixed;
-    width: 100%;
-}
-
-.nav-bar button {
-    background-color: rgb(71, 92, 133);
-    color: white;
-    height: 100%;
-}
-
-.nav-bar button:hover {
+.navbar li:hover {
     background-color: rgba(223, 223, 32, .5);
+    padding-bottom: 0;
 }
+
 .margin-top {
     margin-top: 150px;
 }
@@ -24,15 +11,17 @@
     height: 50px;
     width: 80px;
 }
-.parallax1 {
-    background-image: url("https://goo.gl/brGgI6");
-    min-height:1000px;
+
+body {
+    background-image: url("https://goo.gl/9JqAr6");
+    min-height: 1000px;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .parallax-block {
     background-color: rgba(133, 156, 224, .5);
     height: 100%;
@@ -44,7 +33,7 @@
 
 .parallax2 {
     background-image: url("https://goo.gl/uYw3rM");
-    min-height:1000px;
+    min-height: 1000px;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -54,7 +43,7 @@
 
 .parallax3 {
     background-image: url("https://goo.gl/FsfUQX");
-    min-height:1000px;
+    min-height: 1000px;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -95,4 +84,30 @@
 .para-text img {
     max-width: 100%;
     position: static;
+}
+
+
+/*li {
+    display: inline-block;
+    height: 50px;
+    padding: 0;
+}*/
+
+#appView {
+    background-color: black;
+    color: white;
+}
+
+.signup-modal {
+  background-color: rgba(102, 102, 102, .5);
+}
+
+.card-container {
+  height: 1000px;
+  background-color: gray;
+}
+
+.card-container img{
+  max-width: 500px;
+  max-height: 500px;
 }

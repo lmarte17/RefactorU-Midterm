@@ -1,0 +1,37 @@
+Name Ideas:
+
+Canary; bulletin; gazzette; anchor; grapevine; chatterbox
+
+_____________________________________________________________________________
+
+
+APIs:
+
+newsapi.org
+API key: b5a5796607794df6ada10b439d80729a
+
+
+http://api.wunderground.com/api/fb6c8a3bc598c038/conditions/q/CA/San_Francisco.json
+API key: fb6c8a3bc598c038
+
+_____________________________________________________________________________
+
+Color Scheme:
+ - Blue, Gray, yellow
+
+
+Layout:
+- Cards
+    - sidescrolling: touch on mobile, side arrows on larger screens;
+    - use the box turning effect
+
+
+_____________________________________________________________________________
+What makes sense?
+Order of page:
+  1 - nav-bar
+  2 - title animation
+  3 - News stories
+        -News for you
+        -world
+        -local

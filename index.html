@@ -1,50 +1,143 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
-        <link rel="stylesheet" href="main.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet">
-    </head>
-    
-    <body>
+<html ng-app='myApp'>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--- Bootstrap CSS --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--- JavaScript Files -------->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/main.module.js"></script>
+    <script src="js/main.controller.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet">
+</head>
+
+<body ng-controller="SportsController as sCtrl" ng-controller="appController as ctrl">
+    <nav class="navbar navbar-inverse">
         <div class="container-fluid">
-            <div class="row">
-        <div class="nav-bar">
-                <a href="https://github.com/lmarte17" target="_blank"><img src="https://goo.gl/oT9Bst" class="logo img-circle col-lg-1"></a>
-                <button class="btn fade in" href="#">Home</button>
-                <button class="btn fade in" href="#">About</button>
-                <button class="btn fade in" href="#">Filler</button>
-                <button class="btn fade in" href="#">Contact</button>
-                <button class="btn glyphicon glyphicon-user" href="#"> Sign up</button>
-                <button class="btn glyphicon glyphicon-log-in" href="#"> Login</button>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/#/home">Home</a>
+                </li>
+                <li>
+                    <a href="/#/about">About</a>
+                </li>
+                <li>
+                    <a href="/#/sports">Sports</a>
+                </li>
+                <li>
+                    <a href="/#/contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a data-toggle="modal" data-target="#signup-modal"><span class="glyphicon glyphicon-user"></span>Sign up</a>
+                </li>
+                <li>
+                    <a href="/#/login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+    <div class="parallax1 container-fluid">
+        <div class="row margin-top">
+            <div class="title-box img-rounded">
+                Lots of news for all you dudes
+            </div>
         </div>
-        </div>
-        <div class="parallax1 container-fluid">
-            <div class="row margin-top">
-                <div class="title-box img-rounded">
-                    Welcome To The Jungle
+    </div>
+    <div id="signup-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign up below:</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" id="#signup">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="pwd">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Remember me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-        <div class="parallax-block container-fluid">
-            <div class="para-text row">
-                <div class="col-lg-6">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card card-inverse col-lg-3">
+                <img class="card-img" src="https://goo.gl/uYw3rM" alt="Card image">
+                <div class="card-img-overlay">
+                    <h4 class="card-title">Headline</h4>
+                    <p class="card-text">Brief Description: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div id="appView">
+        <ng-view>
+
+        </ng-view>
+    </div> -->
+
+
+
+
+
+    <!-- <div class="parallax-block container-fluid">
+        <div class="para-text row">
+            <div class="col-lg-6">
                 <h2>Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h2>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="https://goo.gl/gjN3va">
-                </div>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia
+                    deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
+                    possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+                    rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://goo.gl/gjN3va">
             </div>
         </div>
-        <div class="parallax2">
-            
-        </div>
-        <div class="parallax3">
-            
-        </div>
-    </body>
-    
+    </div>
+    <div class="parallax2">
+
+    </div>
+    <div class="parallax3">
+
+    </div> -->
+</body>
+
 </html>
