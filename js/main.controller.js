@@ -1,14 +1,9 @@
 angular.module('myApp')
-    .controller('appController', appController)
-    .controller('WorldController', worldController)
-    .controller('USAController', usaController)
-    .controller('SportsController', sportsController)
-    .controller('LocalController', localController)
+    .controller('AppController', appController)
     .config(myRouter);
 
 myRouter.$inject = ['$routeProvider'];
-worldController.$inject = ['$http'];
-
+appController.$inject = ['$http'];
 
 function myRouter($routeProvider) {
     $routeProvider
@@ -26,62 +21,15 @@ function myRouter($routeProvider) {
         })
 };
 
-
-function appController() {
+function appController($http) {
     var ctrl = this;
-    console.log("it's working!");
-}
-
-function worldController($http) {
-  var wCtrl = this;
-  wCtrl.getWorldNews = function() {
-    $http.get('https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
-    .then(function(res, status) {
-      console.log(res.data);
-      wCtrl.wData = res.data;
-    }, function(res, status) {
-      console.log('Failure: ' + res);
-    });
-  };
-}
-
-
-function usaController($http) {
-  var uCtrl = this;
-  uCtrl.getUSNews = function() {
-    $http.get('https://newsapi.org/v1/articles?source=associated-press&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
-    .then(function(res, status) {
-      console.log(res.data);
-      uCtrl.uData = res.data;
-    }, function(res, status) {
-      console.log('Failure: ' + res);
-    });
-  };
-}
-
-function sportsController($http) {
-  var sCtrl = this;
-  sCtrl.getSportNews = function() {
-    $http.get('https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
-    .then(function(res, status) {
-      console.log(res.data);
-      sCtrl.sData = res.data;
-    }, function(res, status) {
-      console.log('Failure: ' + res);
-    });
-  };
-}
-
-
-function localController($http) {
-  var lCtrl = this;
-  lCtrl.getLocalNews = function() {
-    $http.get('https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
-    .then(function(res, status) {
-      console.log(res.data);
-      lCtrl.lData = res.data;
-    }, function(res, status) {
-      console.log('Failure: ' + res);
-    });
-  };
+    ctrl.getNews = function(source) {
+      $http.get('https://newsapi.org/v1/articles?source=' + source + '&apiKey=b5a5796607794df6ada10b439d80729a')
+      .then(function(res, status) {
+        console.log(res.data);
+        ctrl.cData = res.data;
+      }, function(res, status) {
+        console.log('Failure: ' + res);
+      });
+    };
 }

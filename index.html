@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet">
 </head>
 
-<body ng-controller="WorldController as wCtrl" ng-controller="appController as ctrl" ng-controller="SportsController as sCtrl" ng-controller="USAController as uCtrl" ng-Controller="LocalController as lCtrl">
+<body ng-controller="AppController as ctrl">
     <nav class="navbar navbar-inverse nav-bar">
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
@@ -31,16 +31,16 @@
                         <a href="#"><img src="https://goo.gl/Ye2k69" class="logo"></a>
                     </li>
                     <li>
-                        <a href="#/world" ng-click="wCtrl.getWorldNews()">World</a>
+                        <a href="#/world" ng-click="ctrl.getNews('cnn')">World</a>
                     </li>
                     <li>
-                        <a href="#/USA" ng-click="uCtrl.getUSNews()">'Merica</a>
+                        <a href="#/USA" ng-click="ctrl.getNews('associated-press')">'Merica</a>
                     </li>
                     <li>
-                        <a href="#/sports" ng-click="sCtrl.getSportNews()">Sports</a>
+                        <a href="#/sports" ng-click="ctrl.getNews('espn')">Sports</a>
                     </li>
                     <li>
-                        <a href="#/local" ng-click="lCtrl.getLocalNews()">Local</a>
+                        <a href="#/local" ng-click="ctrl.getNews('the-new-york-times')">Local</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
