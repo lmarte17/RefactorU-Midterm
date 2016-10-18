@@ -1,25 +1,28 @@
 angular.module('myApp')
     .controller('appController', appController)
+    .controller('WorldController', worldController)
+    .controller('USAController', usaController)
     .controller('SportsController', sportsController)
+    .controller('LocalController', localController)
     .config(myRouter);
 
 myRouter.$inject = ['$routeProvider'];
-sportsController.$inject = ['$http'];
+worldController.$inject = ['$http'];
 
 
 function myRouter($routeProvider) {
     $routeProvider
-        .when('/', {
-            templateUrl: 'templates/home.html'
+        .when('/world', {
+            templateUrl: 'templates/world.html'
         })
-        .when('/about', {
-            templateUrl: 'templates/about.html'
+        .when('/USA', {
+            templateUrl: 'templates/USA.html'
         })
         .when('/sports', {
             templateUrl: 'templates/sports.html'
         })
-        .when('/signup', {
-            templateUrl: 'templates/signup.html'
+        .when('/local', {
+            templateUrl: 'templates/local.html'
         })
 };
 
@@ -29,15 +32,56 @@ function appController() {
     console.log("it's working!");
 }
 
-function sportsController() {
+function worldController($http) {
+  var wCtrl = this;
+  wCtrl.getWorldNews = function() {
+    $http.get('https://newsapi.org/v1/articles?source=cnn&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
+    .then(function(res, status) {
+      console.log(res.data);
+      wCtrl.wData = res.data;
+    }, function(res, status) {
+      console.log('Failure: ' + res);
+    });
+  };
+}
+
+
+function usaController($http) {
+  var uCtrl = this;
+  uCtrl.getUSNews = function() {
+    $http.get('https://newsapi.org/v1/articles?source=associated-press&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
+    .then(function(res, status) {
+      console.log(res.data);
+      uCtrl.uData = res.data;
+    }, function(res, status) {
+      console.log('Failure: ' + res);
+    });
+  };
+}
+
+function sportsController($http) {
   var sCtrl = this;
   sCtrl.getSportNews = function() {
-    $http.get('https://newsapi.org/v1/sources?category=sport&apiKey=b5a5796607794df6ada10b439d80729a')
+    $http.get('https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
     .then(function(res, status) {
       console.log(res.data);
       sCtrl.sData = res.data;
     }, function(res, status) {
       console.log('Failure: ' + res);
     });
-  }
+  };
+}
+
+
+function localController($http) {
+  var lCtrl = this;
+  lCtrl.getLocalNews = function() {
+    $http.get('https://newsapi.org/v1/articles?source=the-new-york-times&sortBy=top&apiKey=b5a5796607794df6ada10b439d80729a')
+    .then(function(res, status) {
+      console.log(res.data);
+      lCtrl.lData = res.data;
+    }, function(res, status) {
+      console.log('Failure: ' + res);
+    });
+  };
 }

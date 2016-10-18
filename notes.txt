@@ -1,6 +1,6 @@
 Name Ideas:
 
-Canary; bulletin; gazzette; anchor; grapevine; chatterbox
+Canary; bulletin; gazzette; anchor; grapevine; chatterbox; au courant;
 
 _____________________________________________________________________________
 
@@ -30,8 +30,19 @@ _____________________________________________________________________________
 What makes sense?
 Order of page:
   1 - nav-bar
-  2 - title animation
-  3 - News stories
+  2 - title animation - parallax
+  3 - News stories - Angular single page app effect (ng route)
         -News for you
         -world
         -local
+        -etc
+  4 - about; contact; etc - single page (ng route)
+  5 - footer
+
+
+____________________________________________________________________________
+
+Tasks:
+ - Angular: routing
+ - API: display as cards
+ - Responsiveness
