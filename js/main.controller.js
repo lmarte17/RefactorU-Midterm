@@ -7,6 +7,9 @@ appController.$inject = ['$http'];
 
 function myRouter($routeProvider) {
     $routeProvider
+        .when('/', {
+            templateUrl: 'templates/world.html'
+        })
         .when('/world', {
             templateUrl: 'templates/world.html'
         })

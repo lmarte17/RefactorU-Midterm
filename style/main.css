@@ -1,4 +1,5 @@
 .nav-bar {
+  background: linear-gradient(to bottom right, #1EA0F2, #971EEB);
   position: fixed;
   z-index: 10;
 }
@@ -39,41 +40,13 @@ li a {
     background-image: url("https://goo.gl/DQvwQc");
     /*data-speed: .5;*/
     min-height: 1000px;
+    z-index: 1;
     height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-/*.parallax-block {
-    background-color: rgba(133, 156, 224, .5);
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax2 {
-    background-image: url("https://goo.gl/uYw3rM");
-    min-height: 1000px;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax3 {
-    background-image: url("https://goo.gl/FsfUQX");
-    min-height: 1000px;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}*/
 
 .title-box {
     background-color: rgba(153, 153, 153, .7);
@@ -106,6 +79,13 @@ li a {
     position: static;
 }
 
+.right {
+  text-align: right;
+}
+
+.card:hover {
+  box-shadow: 10px 10px 5px rgb(50, 0, 0);
+}
 
 /*li {
     display: inline-block;
@@ -122,21 +102,27 @@ li a {
 
 }
 
-.signup-modal {
-  background-color: rgba(102, 102, 102, .5);
-}
-
-.card-container {
-  height: 1000px;
-  background-color: gray;
-}
-
-.card-container img{
-  max-width: 500px;
-  max-height: 500px;
+#login-modal {
+  color: black;
+  box-shadow: 10px 10px 5px rgb(50, 0, 0);
 }
 
 .news-view {
   display: inline-block;
-  background: linear-gradient(to bottom right, rgb(97, 99, 107), rgb(41, 71, 163));
+  background: linear-gradient(to bottom right, #1EA0F2, #971EEB);
+}
+
+.modal-content {
+  background-color: rgba(102, 102, 102, .5);
+}
+
+.social li {
+  display: inline-block;
+  padding: 5px;
+  padding-top: 10px;
+}
+
+.twitter-box {
+  padding-top: 10px;
+  padding-left: 10px;
 }
