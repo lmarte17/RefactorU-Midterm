@@ -43,6 +43,17 @@ Order of page:
 ____________________________________________________________________________
 
 Tasks:
- - Angular: routing
- - API: display as cards
+ - Angular: routing (done)
+ - API: display as cards (done)
+ - modals (done)
+ - jump to spot
+ - load local func on init load
+ - new logo?
  - Responsiveness
+
+
+ _______________________________________
+
+ Questions:
+  - jump to spot on page
+  - load function on page load
